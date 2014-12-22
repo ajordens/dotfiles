@@ -26,11 +26,13 @@ brew install gnu-sed --with-default-names
 brew install bash
 brew install bash-completion2
 
-# Switch to using brew-installed bash as default shell
-if ! fgrep -q "${BREW_PREFIX}/bin/bash" /etc/shells; then
-  echo "${BREW_PREFIX}/bin/bash" | sudo tee -a /etc/shells;
-  chsh -s "${BREW_PREFIX}/bin/bash";
+# Switch to using brew-installed zsh as default shell
+brew install zsh
+if ! fgrep -q '/usr/local/bin/zsh' /etc/shells; then
+  echo '/usr/local/bin/zsh' | sudo tee -a /etc/shells;
 fi;
+
+chsh -s /usr/local/bin/zsh;
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
@@ -48,6 +50,12 @@ brew install gmp
 
 # Install font tools.
 brew tap bramstein/webfonttools
+brew install sfnt2woff
+brew install sfnt2woff-zopfli
+brew install woff2
+
+# Install font tools.
+brew tap bramstein/fonttools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
@@ -96,6 +104,26 @@ brew install ssh-copy-id
 brew install tree
 brew install vbindiff
 brew install zopfli
+
+# Install Node.js. Note: this installs `npm` too, using the recommended
+# installation method.
+brew install node
+
+# Install io.js
+#brew install iojs
+
+# Customizations
+brew install reattach-to-user-namespace
+brew install fasd
+brew install jsonpp
+brew install jq
+brew install httpie
+brew install pass
+brew install hub
+brew install keybase
+brew install kubectl
+#sudo gem install tmuxinator
+#brew install docker
 
 # Remove outdated versions from the cellar.
 brew cleanup

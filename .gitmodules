@@ -1,0 +1,6 @@
+[submodule ".zprezto"]
+	path = .zprezto
+	url = https://github.com/ajordens/prezto.git
+[submodule ".tmux/plugins/tmux-resurrect"]
+	path = .tmux/plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
