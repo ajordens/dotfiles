@@ -54,12 +54,6 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 
-# Install font tools.
-brew tap bramstein/fonttools
-brew install sfnt2woff
-brew install sfnt2woff-zopfli
-brew install woff2
-
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install aircrack-ng
 brew install bfg
@@ -122,8 +116,12 @@ brew install pass
 brew install hub
 brew install keybase
 brew install kubectl
+brew install ansible
+brew install Caskroom/cask/google-cloud-sdk
 #sudo gem install tmuxinator
 #brew install docker
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+sudo gem install travis
