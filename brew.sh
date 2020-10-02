@@ -125,6 +125,7 @@ brew install kubectl
 brew install ansible
 brew install Caskroom/cask/google-cloud-sdk
 brew install kotlin
+brew cask install insomnia
 #sudo gem install tmuxinator
 #brew install docker
 
